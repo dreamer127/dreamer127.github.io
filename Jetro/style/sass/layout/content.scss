@@ -137,11 +137,11 @@
 		}
 	}
 
-	.BtnBlok{
+	.btnBlok{
+		margin: 40px 0;
 		&__inner{
 			display: flex;
-			justify-content: space-between;
-			margin: 20px 0;
+			justify-content: space-between;	
 		}
 
 		&__col{
@@ -149,30 +149,25 @@
 			flex-direction: column;
 			justify-content: space-between;
 			align-items: flex-start;
+			flex-basis: 33.3333%;
+			margin-right: 20px;
 
 			&-title{
 				display: flex;
-				margin: 15px 0;
 			}
 
 			&-icon{
-				display:block;
-				width: 50px;
-				height: 50px;
-
-				.setting{
-					width: inherit;
-    				height: inherit;
+				> div {
+					width: 50px;
+					height: 50px;
+				}
+				._setting{
 					background: url('../../images/Btn_block_sprites.png') -57px -5px no-repeat;
 				}
-				.ok{
-					width: inherit;
-    				height: inherit;
+				._ok{
 					background: url('../../images/Btn_block_sprites.png') -113px -5px no-repeat;
 				}
-				.piople{
-					width: inherit;
-    				height: inherit;
+				._piople{
 					background: url('../../images/Btn_block_sprites.png') -5px -5px no-repeat;
 				}
 			}
@@ -183,7 +178,6 @@
 				text-align: left;
 				margin: 20px 0;
 			}
-
 			
 		}
 	}
@@ -198,9 +192,56 @@
 	.works{
 		@include regularBebas;
 		margin-bottom: 50px;
+
 		&__line{
 			margin: 20px 0;
 		}
+		&__portfolio{
+			
+		}
+		
+		&__image:hover{
+			position: relative;
+			a{
+				position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    width: 18%;
+			    height: 20%;
+			    margin: 0;
+			    transform: translate(-50%, -50%);
+			    background: url(../../images/+.png) no-repeat;
+			}
+
+			&:before{
+				content:'';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.7);
+
+			}
+			/*a:after{
+				content: '';
+			    position: absolute;
+			    top: 50%;
+			    left: 50%;
+			    width: 18%;
+			    height: 20%;
+			    margin: 0;
+			    transform: translate(-50%, -50%);
+			    background: url(../../images/+.png) no-repeat;
+			}*/
+			
+		}
+
+		&__info{
+			border: 1px solid $secondary-color;
+			border-top: 0;
+		}
+		
 		&__name{
 			font-size: 16px;
 			line-height: 18px;

@@ -18,9 +18,9 @@ $fonts_dir: '../fonts/';
   font-style: normal;
 }
 
-@include font("bebas/BebasNeueRegular", "Bebas Neue");
+@include font("../../fonts/bebas/Bebas", "Bebas");
 @mixin regularBebas() {
-  @include font-mixin("BebasNeueRegular");
+  @include font-mixin("Bebas");
 }
 
 @include font("Helvetica/HelveticaNeueCyr-Light", "HelveticaNeueCyr-Light");

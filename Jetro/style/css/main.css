@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300i,400");
 @font-face {
-  font-family: "Bebas Neue";
-  src: url("../fonts/bebas/BebasNeueRegular.woff") format("woff"), url("../fonts/bebas/BebasNeueRegular.woff2") format("woff2");
+  font-family: "Bebas";
+  src: url("../fonts/../../fonts/bebas/Bebas.woff") format("woff"), url("../fonts/../../fonts/bebas/Bebas.woff2") format("woff2");
   font-weight: normal;
   font-style: normal; }
 @font-face {
@@ -77,8 +77,8 @@ html {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px; }
+  padding-right: 10px;
+  padding-left: 10px; }
 
 .col {
   -ms-flex-preferred-size: 0;
@@ -2061,6 +2061,9 @@ a {
   padding: 0 10px;
   margin: 0 auto; }
 
+img {
+  max-width: 100%; }
+
 input,
 button {
   background-color: transparent;
@@ -2130,7 +2133,7 @@ input::-ms-clear {
     align-items: center;
     justify-content: space-between; }
   .header__logo {
-    font-family: "BebasNeueRegular", "Arial", "Helvetica", "Tahoma", sans-serif;
+    font-family: "Bebas", "Arial", "Helvetica", "Tahoma", sans-serif;
     font-weight: normal;
     font-style: normal;
     text-transform: uppercase;
@@ -2249,43 +2252,38 @@ input::-ms-clear {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat; }
-  .content .BtnBlok__inner {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0; }
-  .content .BtnBlok__col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start; }
-    .content .BtnBlok__col-title {
+  .content .btnBlok {
+    margin: 40px 0; }
+    .content .btnBlok__inner {
       display: flex;
-      margin: 15px 0; }
-    .content .BtnBlok__col-icon {
-      display: block;
-      width: 50px;
-      height: 50px; }
-      .content .BtnBlok__col-icon .setting {
-        width: inherit;
-        height: inherit;
+      justify-content: space-between; }
+    .content .btnBlok__col {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-basis: 33.3333%;
+      margin-right: 20px; }
+      .content .btnBlok__col-title {
+        display: flex; }
+      .content .btnBlok__col-icon > div {
+        width: 50px;
+        height: 50px; }
+      .content .btnBlok__col-icon ._setting {
         background: url("../../images/Btn_block_sprites.png") -57px -5px no-repeat; }
-      .content .BtnBlok__col-icon .ok {
-        width: inherit;
-        height: inherit;
+      .content .btnBlok__col-icon ._ok {
         background: url("../../images/Btn_block_sprites.png") -113px -5px no-repeat; }
-      .content .BtnBlok__col-icon .piople {
-        width: inherit;
-        height: inherit;
+      .content .btnBlok__col-icon ._piople {
         background: url("../../images/Btn_block_sprites.png") -5px -5px no-repeat; }
-    .content .BtnBlok__col-text {
-      font-family: "HelveticaNeueCyr", "Arial", "Helvetica", "Tahoma", sans-serif;
-      font-weight: normal;
-      font-style: normal;
-      font-size: 12px;
-      text-align: left;
-      margin: 20px 0; }
+      .content .btnBlok__col-text {
+        font-family: "HelveticaNeueCyr", "Arial", "Helvetica", "Tahoma", sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 12px;
+        text-align: left;
+        margin: 20px 0; }
   .content .shapka {
-    font-family: "BebasNeueRegular", "Arial", "Helvetica", "Tahoma", sans-serif;
+    font-family: "Bebas", "Arial", "Helvetica", "Tahoma", sans-serif;
     font-weight: normal;
     font-style: normal;
     font-size: 18px;
@@ -2294,12 +2292,45 @@ input::-ms-clear {
     margin: 0;
     margin-left: 20px; }
   .content .works {
-    font-family: "BebasNeueRegular", "Arial", "Helvetica", "Tahoma", sans-serif;
+    font-family: "Bebas", "Arial", "Helvetica", "Tahoma", sans-serif;
     font-weight: normal;
     font-style: normal;
     margin-bottom: 50px; }
     .content .works__line {
       margin: 20px 0; }
+    .content .works__image:hover {
+      position: relative;
+      /*a:after{
+      	content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 18%;
+          height: 20%;
+          margin: 0;
+          transform: translate(-50%, -50%);
+          background: url(../../images/+.png) no-repeat;
+      }*/ }
+      .content .works__image:hover a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 18%;
+        height: 20%;
+        margin: 0;
+        transform: translate(-50%, -50%);
+        background: url(../../images/+.png) no-repeat; }
+      .content .works__image:hover:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7); }
+    .content .works__info {
+      border: 1px solid #b9b9b9;
+      border-top: 0; }
     .content .works__name {
       font-size: 16px;
       line-height: 18px;
@@ -2346,7 +2377,7 @@ input::-ms-clear {
     font-size: 12px;
     text-align: left; }
     .footer__col-title {
-      font-family: "BebasNeueRegular", "Arial", "Helvetica", "Tahoma", sans-serif;
+      font-family: "Bebas", "Arial", "Helvetica", "Tahoma", sans-serif;
       font-weight: normal;
       font-style: normal;
       text-align: left;
