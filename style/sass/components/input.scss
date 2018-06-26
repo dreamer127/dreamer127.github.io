@@ -1,0 +1,32 @@
+input::-ms-clear {
+    display: none;
+}
+.form-input {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 10px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.form-input:focus {
+    border-color: skyblue;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #ccc;
+}
+.form-input::-moz-placeholder {
+  color: #ccc;
+}
+.form-input:-ms-input-placeholder {
+  color: #ccc;
+}
+.form-input:-moz-placeholder {
+  color: #ccc;
+}
+
+.form-input:disabled {
+    opacity: 0.5;
+}

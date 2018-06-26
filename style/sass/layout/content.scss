@@ -1,0 +1,221 @@
+.content{
+	position: relative;
+
+	&__inner{
+		position: relative;
+		z-index: 2;
+	}
+	.line{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: $light-color;
+		z-index: 1;
+
+		&__inner{
+			position: relative;
+			height: 62px;
+			background-color: #fff;
+
+			&:before{
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 100%;
+				background-color:white;
+				top: 0;
+				right: 100%;
+				z-index: 1;
+			}
+
+			&:after{
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 100%;
+				background-color:white;
+				top: 0;
+				left: 100%;
+				z-index: 1;
+			}
+		}
+
+	}
+	.slider{
+		&__inner{
+
+		}
+
+		&__view{
+			position: relative;
+
+			.slick{
+				&-arrow{
+					position: absolute;
+					top: 50%;
+					border: 0;
+	                background-color: transparent;
+	                font-size: 0;
+	                padding: 0;
+	                width: 36px;
+	                height: 52px;
+	                background-image: url('../images/arrow.png');
+	                z-index: 1;
+	                margin-top: -26px;
+				}
+
+				&-prev {
+                	left: 25px;
+                	// transform: rotate(180deg);
+                	
+	                &:before{
+	                	font-size: 46px;
+    					line-height: 2;
+	                }
+            	}
+
+	            &-next {
+	                right: 25px;
+
+	                &:before{
+	                	font-size: 46px;
+    					line-height: 2;
+	                }
+	            }
+			}
+		}
+
+		&__item{
+			height: 400px;
+	        background-size: cover;
+	        background-position: center;
+	        background-repeat: no-repeat;
+	        position: relative;
+		}
+
+		&__desc{
+			position: absolute;
+	        left: 35px;
+	        bottom: 35px;
+	        width: 410px;
+	        padding: 20px;
+	        color: #fff;
+	        background-color: rgba(232, 102, 60, 0.8);
+				
+			._title{
+				margin-bottom: 15px;
+				font-size: 18px;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+
+			._desc{
+				font-size: 12px;
+				line-height: 16px;
+			}
+		}
+
+		&__nav{
+			margin: 20px -10px 0;
+
+			.slick-current {
+	            opacity: 0.5;
+	        }
+
+			&-col{
+				padding: 0 10px;
+        		cursor: pointer;
+			}
+
+			&-item{
+				height: 140px;
+		        background-size: cover;
+		        background-position: center;
+		        background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.BtnBlok{
+		&__inner{
+			display: flex;
+			justify-content: space-between;
+			margin: 20px 0;
+		}
+
+		&__col{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+
+			&-title{
+				display: flex;
+				margin: 15px 0;
+			}
+
+			&-icon{
+				display:block;
+				width: 50px;
+				height: 50px;
+
+				.setting{
+					width: inherit;
+    				height: inherit;
+					background: url('../../images/Btn_block_sprites.png') -57px -5px no-repeat;
+				}
+				.ok{
+					width: inherit;
+    				height: inherit;
+					background: url('../../images/Btn_block_sprites.png') -113px -5px no-repeat;
+				}
+				.piople{
+					width: inherit;
+    				height: inherit;
+					background: url('../../images/Btn_block_sprites.png') -5px -5px no-repeat;
+				}
+			}
+
+			&-text{
+				@include Helveticalight;
+				font-size: 12px;
+				text-align: left;
+				margin: 20px 0;
+			}
+
+			
+		}
+	}
+	.shapka{
+				@include regularBebas;
+				font-size: 18px;
+				color: $primary-color;
+				text-transform: uppercase;
+				margin: 0;
+				margin-left: 20px;
+			}
+	.works{
+		@include regularBebas;
+		margin-bottom: 50px;
+		&__line{
+			margin: 20px 0;
+		}
+		&__name{
+			font-size: 16px;
+			line-height: 18px;
+			text-align: left;
+			text-transform: uppercase;
+			color: $secondary-color;
+			padding: 10px 10px 0 10px;
+		}
+		&__date{
+			font-size: 11px;
+			line-height: 18px;
+			text-align: left;
+			text-transform: uppercase;
+			color: $primary-color;
+			padding: 0 10px 10px 10px;
+		}
+	}
+}

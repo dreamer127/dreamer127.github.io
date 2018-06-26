@@ -1,0 +1,36 @@
+$fonts_dir: '../fonts/';
+
+@mixin font($family, $name) {
+  $font_file_path: $fonts_dir + $family;
+
+  @font-face {
+    font-family: $name;
+    src: url($font_file_path + '.woff') format('woff'),
+    url($font_file_path + '.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@mixin font-mixin($font_name) {
+  font-family: "#{$font_name}", 'Arial', 'Helvetica', 'Tahoma', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@include font("bebas/BebasNeueRegular", "Bebas Neue");
+@mixin regularBebas() {
+  @include font-mixin("BebasNeueRegular");
+}
+
+@include font("Helvetica/HelveticaNeueCyr-Light", "HelveticaNeueCyr-Light");
+@mixin Helveticalight() {
+  @include font-mixin("HelveticaNeueCyr");
+}
+@include font("Helvetica/HelveticaNeueCyr-Medium", "HelveticaNeueCyr-Medium");
+@mixin HelveticaMedium() {
+  @include font-mixin("HelveticaNeueCyr");
+  font-weight: 500;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300i,400');
