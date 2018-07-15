@@ -1,5 +1,6 @@
-@import "config/fonts";
 @import "config/variables";
+@import "config/fonts";
+@import "mixins/media";
 
 @import "libs/grid";
 @import "libs/normalize";
@@ -21,5 +22,6 @@
 @import "blocks/rightBlock";
 @import "blocks/contact";
 @import "blocks/about";
+@import "blocks/blog";
 
 @import "layout/footer";

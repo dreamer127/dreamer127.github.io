@@ -1,4 +1,5 @@
 .rightBlock{
+
 	&__content{
 		&:not(:first-child){
 			margin: 20px 0;
@@ -9,7 +10,6 @@
 		display: flex;
 		position: relative;
 		background: url(../../images/Line.png) repeat-x left top;
-
 		h2{
 			@include regularBebas;
 			margin: 0;
@@ -34,22 +34,30 @@
 		color: black;
 		transition: 0.3s;
 		&:hover{
-			font-size: 14px;
     	color: $primary-color;
 		}
 	}
 
 	&__galeri{
+		display: flex;
+		flex-wrap: wrap;
 		padding: 20px 0;
-	}
-}
-.col-3:nth-last-of-type(n+5){
-	.photo{
-		margin-bottom: 5px;
-	}
-}
-.photo{
-	a{
-		display: block;
+
+		&-photo{
+			background-color: #f3af9d;
+			border: 1px solid #e8603c;
+			width: 50px;
+			height: 50px;
+			margin: 0 5px 5px 0;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+			&:nth-child(4n) {
+				margin-right: 0;
+			}
+		}
 	}
 }
